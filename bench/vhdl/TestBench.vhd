@@ -58,7 +58,7 @@ begin
 	--as : AsyncStim generic map(FileName => "../../../bench/vhdl/ROM80.vhd", InterCharDelay => 100 us, Baud => 1000000, Bits => 8)
 	--			port map(RXD);
 
-	al : AsyncLog generic map(FileName => "RX_Log.txt", Baud => 1000000, Bits => 8)
+	al : AsyncLog generic map(FileName => "RX_Log.txt", Baud => 115200, Bits => 8)
 				port map(TXD);
 
 	u0 : entity work.T80a
