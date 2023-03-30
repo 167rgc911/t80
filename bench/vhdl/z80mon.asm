@@ -325,11 +325,11 @@ dispatch_table  defw    cold_start      ; $00 = clear etc.
 ;
 initialize      ld      sp, start_type - $1
 ;
-; Initialize UART to 9600,8N1:
+; Initialize UART to 115200,8N1:
 ;
                 ld      a, $80
                 out     (uart_register_3), a
-                ld      a, $c           ; 1843200 / (16 * 9600)
+                ld      a, $9           ; (1<<24) / (16*115200)
                 out     (uart_register_0), a
                 xor     a
                 out     (uart_register_1), a
