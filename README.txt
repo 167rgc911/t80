@@ -1,4 +1,4 @@
-playing around with (V)HDL and the Z80
+playing around with (V)HDL and the T80i (a Z80/8080 clone)
 
 =============
 
