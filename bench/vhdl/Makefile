@@ -12,6 +12,7 @@ ROM80.o \
 SRAM.o \
 AsyncLog.o \
 AsyncStim.o \
+Interactive.o \
 StimLog.o \
 TestBench.o
 BINF = TestBench
