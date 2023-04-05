@@ -68,8 +68,8 @@ entity Interactive is
 		P_Odd_Even_n	: boolean := false	-- false => Even Parity, true => Odd Parity
 	);
 	port(
-		TXD				: out std_logic;
-		RXD				: in std_logic
+		RXD				: in std_logic;
+		TXD				: out std_logic
 	);
 end Interactive;
 
