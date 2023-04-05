@@ -8,6 +8,8 @@ OBJF = \
 ../../rtl/vhdl/T80.o \
 ../../rtl/vhdl/T80a.o \
 ../../rtl/vhdl/T16450.o \
+../../../puart/ghdl_uart_pkg.o \
+../../../puart/ghdl_uart.o \
 ROM80.o \
 SRAM.o \
 AsyncLog.o \
@@ -29,7 +31,7 @@ all: $(BINF)
 	$(GHDL) -a $(GHDL_OPTS) $^
 
 $(BINF): $(OBJF)
-	$(GHDL) -e $(GHDL_OPTS) $@
+	$(GHDL) -e $(GHDL_OPTS) -Wl,ghdl_pty.c $@
 
 $(BINF).ghw: $(BINF)
 	$(GHDL) -r $^ --wave=$@
